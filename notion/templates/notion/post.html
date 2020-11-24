@@ -30,12 +30,15 @@
     </head>
     <body>
     <br>
+    <div>
         <center> <h1><a href="/">dalnotion🌙</a> </h1>
         <h2>{{post.name}}</h2>
+            <h3> {{post.pub_date}} </h3>
         <textarea name="text" readonly>{{post.text}}</textarea><br><br><br>
 <!--        <button class="btn write"><a href="/">목록으로 가기</a></button>&nbsp;&nbsp;&nbsp;-->
 <!--            <button class="btn write"><a href="/{{post.pk}}/delete">삭제하기</a></button></center>-->
             <input type="button" class="btn write" value="목록" onclick="location.href='/'">&nbsp;&nbsp;&nbsp;
             <input type="button" class="btn write" value="삭제" onclick="location.href='/{{post.pk}}/delete'"></center>
+        </div>
     </body>
 </html>
