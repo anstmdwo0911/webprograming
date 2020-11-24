@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <title>dalnotion🌙-글쓰기</title>
+    <style>a { text-decoration:none }
+            .btn {
+              border: 2px solid black;
+              padding: 14px 28px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 5px;
+
+            }
+
+            .write {
+              border-color: #343a40;
+              color: #343a40;
+            }
+
+            .write:hover {
+              background-color: #afefb2;
+              color: white;
+            }
+            textarea{
+	        width:500px;
+	        height:300px;
+            resize:none;
+}
+</style>
+</head>
+<body>
+    <br>
+    <center><h1><a href="/"> dalnotion🌙</a></h1>
+        <br><br>
+    <form method="POST">
+        {% csrf_token %}
+       <input type="text" placeholder = "제목" name="name" style="width:500px; height:25px; letter-spacing: 1px"><br><br><br> <textarea name="text" placeholder = "내용"></textarea><br>
+        <br><br>
+<!--        <button class="btn write"><a href="/">취소</a></button>&nbsp;&nbsp;&nbsp;<input type="submit" class="btn write" value="완료">-->
+        <input type="button" class="btn write" value="취소" onclick="location.href='/'">&nbsp;&nbsp;&nbsp;<input type="submit" class="btn write" value="완료">
+    </form>
+    </center>
+</body>

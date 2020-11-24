@@ -1,0 +1,80 @@
+<!--<html>-->
+<!--    <head>-->
+<!--        <title>dalnotion</title>-->
+<!--    </head>-->
+<!--    <body>-->
+<!--    <h1>Notion!</h1>-->
+<!--        <table>-->
+<!--        {% for list in p_list %}-->
+<!--            <ul>-->
+<!--                <ol>-->
+<!--                    <li><a href="/notion/{{ list.pk }}/">{{ list.name }}</a></li>-->
+<!--                </ol>-->
+<!--            </ul>-->
+<!--        {% endfor %}-->
+<!--        </table>-->
+<!--        <button><a href="create/">글쓰기</a></button>-->
+<!--    </body>-->
+<!--</html>-->
+
+<html>
+    <head>
+        <title>dalnotion🌙</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			padding: 10px;
+			border-bottom: 1px solid #343a40;
+		}
+		tr:hover { background-color: #afefb2; }
+		a { text-decoration:none }
+
+.btn {
+  border: 2px solid black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.write {
+  border-color: #343a40;
+  color: #343a40;
+}
+
+.write:hover {
+  background-color: #afefb2;
+  color: white;
+}
+	</style>
+    </head>
+
+    <body>
+    <br>
+    <center><h1><a href="/"> dalnotion🌙</a></h1>
+    <table style="width:50%">
+		<tr style="background-color: #343a40">
+            <th><span style="color:white">번호</span></th>
+            <th><span style="color:white">제목</span></th>
+            <th><span style="color:white">날짜</span></th>
+        </tr>
+        <tr>
+            {% for list in p_list %}
+            <td><center>{{ list.id }}</a></center></td>
+            <td><center><a href="/notion/{{ list.pk }}">{{ list.name }}</a></center></td>
+            <td><center>{{list.pub_date}}</center></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <div>
+<!--        <button class="btn write"><a href="/create/">글 쓰기 ⩥</a></button>-->
+        <input type="button" class="btn write"value="글쓰기" onclick="location.href='/create/'">
+    </div>
+        </center>
+    </body>
+</html>
+

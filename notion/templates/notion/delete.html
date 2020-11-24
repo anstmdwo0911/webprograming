@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <title>dalnotion🌙-글 삭제</title>
+    <style>a { text-decoration:none }
+        .btn {
+          border: 2px solid black;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+
+        }
+
+        .write {
+          border-color: #343a40;
+          color: #343a40;
+        }
+
+        .write:hover {
+          background-color: #afefb2;
+          color: white;
+        }
+</style>
+</head>
+<body>
+<br>
+<center>
+    <h1><a href="/">dalnotion🌙</a> </h1>
+    <form method="POST">
+        {% csrf_token %}
+        <a><u>{{ Post.name }}</u>를 삭제하시겠습니까?</a>
+        <br>
+        <br>
+<!--        <button>삭제</button>-->
+        <input type="button" class="btn write" value="취소" onclick="location.href='/'">
+        <input type="submit" class="btn write" value="삭제">
+    </form>
+    </center>
+</body>

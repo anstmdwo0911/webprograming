@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>dalnotion🌙-Posting!</title>
+        	<style>
+                a { text-decoration:none }
+
+                .btn {
+                  border: 2px solid black;
+                  padding: 14px 28px;
+                  font-size: 16px;
+                  cursor: pointer;
+                  border-radius: 5px;
+
+                }
+
+                .write {
+                  border-color: #343a40;
+                  color: #343a40;
+                }
+                .write:hover {
+                  background-color: #afefb2;
+                  color: white;
+                }
+                textarea{
+	        width:800px;
+	        height:400px;
+            resize:none;
+}
+            </style>
+    </head>
+    <body>
+    <br>
+        <center> <h1><a href="/">dalnotion🌙</a> </h1>
+        <h2>{{post.name}}</h2>
+        <textarea name="text" readonly>{{post.text}}</textarea><br><br><br>
+<!--        <button class="btn write"><a href="/">목록으로 가기</a></button>&nbsp;&nbsp;&nbsp;-->
+<!--            <button class="btn write"><a href="/{{post.pk}}/delete">삭제하기</a></button></center>-->
+            <input type="button" class="btn write" value="목록" onclick="location.href='/'">&nbsp;&nbsp;&nbsp;
+            <input type="button" class="btn write" value="삭제" onclick="location.href='/{{post.pk}}/delete'"></center>
+    </body>
+</html>
